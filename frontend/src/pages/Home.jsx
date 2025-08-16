@@ -161,7 +161,7 @@ const Benefits = () => {
                   <Icon name={b.icon} className="text-violet-400" />
                 </div>
                 <h3 className="mt-3 font-medium">{b.title}</h3>
-                <p className="text-sm text-white/80 mt-1">{b.desc}</p>
+                <p className="text-sm text-white mt-1">{b.desc}</p>
               </CardContent>
             </Card>
           ))}
