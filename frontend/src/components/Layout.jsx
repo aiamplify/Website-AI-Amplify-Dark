@@ -85,7 +85,7 @@ const Footer = () => {
       </div>
       <Separator />
       <div className="max-w-6xl mx-auto px-4 py-6 text-xs flex items-center justify-between">
-        <p className="text-muted-foreground">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
+        <p className="text-white/80">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
         <div className="flex items-center gap-4">
           <Link to={LEGAL.privacyUrl} className="text-white/70 hover:text-white">Privacy Policy</Link>
           <Link to={LEGAL.termsUrl} className="text-white/70 hover:text-white">Terms of Service</Link>
