@@ -69,7 +69,7 @@ const Footer = () => {
             <a href="#solutions" className="text-white/80 hover:text-white">Solutions</a>
             <a href="#benefits" className="text-white/80 hover:text-white">Benefits</a>
             <a href="#process" className="text-white/80 hover:text-white">How it works</a>
-            <a href="#case-studies" className="text-muted-foreground hover:text-foreground">Case studies</a>
+            <a href="#case-studies" className="text-white/80 hover:text-white">Case studies</a>
           </div>
         </div>
         <div>
