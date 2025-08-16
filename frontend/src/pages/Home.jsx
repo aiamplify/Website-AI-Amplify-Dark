@@ -220,7 +220,7 @@ const CTA = () => {
     <section id="cta" className="py-16">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
         <div>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Book your free discovery call</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Book your free discovery call</h2>
           <p className="text-muted-foreground mt-3 max-w-prose">We’ll cover your business needs and an AI Voice Agent strategy tailored to you.</p>
           <Card className="mt-6 bg-black/30 border-border/60">
             <CardContent className="pt-6">
