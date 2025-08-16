@@ -175,7 +175,7 @@ const Process = () => {
   return (
     <section id="process" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Getting started is easy</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Getting started is easy</h2>
         <div className="grid md:grid-cols-4 gap-6 mt-8">
           {PROCESS.map((p) => (
             <Card key={p.step} className="bg-black/30 border-border/60">
