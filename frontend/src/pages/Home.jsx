@@ -45,7 +45,7 @@ const Hero = () => {
             <Icon name="Stars" className="w-3.5 h-3.5 text-violet-400" />
             Trusted by modern teams
           </div>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight text-white">
             {BRAND.tagline}
           </h1>
           <p className="mt-4 text-white/90 max-w-xl">
