@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="w-8 h-8 rounded-md bg-gradient-to-br from-violet-500 to-violet-700" />
             <span className="font-semibold tracking-tight">{BRAND.name}</span>
           </div>
-          <p className="text-sm text-muted-foreground mt-3 max-w-sm">
+          <p className="text-sm text-white/80 mt-3 max-w-sm">
             {BRAND.subTagline}
           </p>
         </div>
