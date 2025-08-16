@@ -48,7 +48,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
             {BRAND.tagline}
           </h1>
-          <p className="mt-4 text-muted-foreground max-w-xl">
+          <p className="mt-4 text-white/90 max-w-xl">
             {BRAND.subTagline}
           </p>
           <div className="mt-6 flex items-center gap-3">
