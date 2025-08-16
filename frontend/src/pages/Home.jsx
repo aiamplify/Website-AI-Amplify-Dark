@@ -168,6 +168,11 @@ const Benefits = () => {
           {BENEFITS.map((b) => (
             <Card key={b.title} className="bg-black/30 border-border/60">
               <CardContent className="pt-6">
+                {b.imageUrl && (
+                  <div className="aspect-[4/3] rounded-md overflow-hidden mb-4">
+                    <img src={b.imageUrl} alt={b.title} className="w-full h-full object-cover" />
+                  </div>
+                )}
                 <div className="w-10 h-10 rounded-md bg-violet-600/20 flex items-center justify-center">
                   <Icon name={b.icon} className="text-violet-400" />
                 </div>

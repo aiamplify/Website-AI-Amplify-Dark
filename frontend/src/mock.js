@@ -78,36 +78,42 @@ export const BENEFITS = [
     desc:
       "Pick up the phone instantly, even at night or on weekends – so you don’t lose leads or keep customers waiting.",
     icon: "Clock",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
   },
   {
     title: "Save your team time",
     desc:
       "Handle repetitive calls so your team focuses on high-value work that needs a human.",
     icon: "Timer",
+    imageUrl: "https://images.unsplash.com/photo-1718220216044-006f43e3a9b1",
   },
   {
     title: "Own your agent",
     desc:
       "Full ownership. No hidden platform fees or subscriptions. You stay in control.",
     icon: "ShieldCheck",
+    imageUrl: "https://images.unsplash.com/photo-1605957073056-34ea7e8dafea",
   },
   {
     title: "Plugs into your stack",
     desc:
       "Connects to CRMs, schedulers, and calendars – fits right into existing workflows.",
     icon: "Plug",
+    imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
   },
   {
     title: "Custom-built",
     desc:
       "We tailor prompts, flows, and automations to your business goals.",
     icon: "Wand2",
+    imageUrl: "https://images.unsplash.com/photo-1617722694908-9be1092d1bc2",
   },
   {
     title: "Rigorous testing",
     desc:
       "We validate edge cases and ensure agents behave reliably before launch.",
     icon: "CheckCircle2",
+    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
   },
 ];
 
