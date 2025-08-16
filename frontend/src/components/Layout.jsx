@@ -16,7 +16,7 @@ const Header = () => {
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((n) => (
-            <a key={n.label} href={n.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a key={n.label} href={n.href} className="text-sm text-white/80 hover:text-white transition-colors">
               {n.label}
             </a>
           ))}
