@@ -67,7 +67,7 @@ const Footer = () => {
           <h4 className="font-medium mb-3">Explore</h4>
           <div className="flex flex-col gap-2 text-sm">
             <a href="#solutions" className="text-white/80 hover:text-white">Solutions</a>
-            <a href="#benefits" className="text-muted-foreground hover:text-foreground">Benefits</a>
+            <a href="#benefits" className="text-white/80 hover:text-white">Benefits</a>
             <a href="#process" className="text-muted-foreground hover:text-foreground">How it works</a>
             <a href="#case-studies" className="text-muted-foreground hover:text-foreground">Case studies</a>
           </div>
