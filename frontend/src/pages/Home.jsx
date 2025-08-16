@@ -199,7 +199,7 @@ const Testimonials = () => {
   return (
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Hear it from our clients</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Hear it from our clients</h2>
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {TESTIMONIALS.map((t, i) => (
             <Card key={i} className="bg-black/30 border-border/60">
