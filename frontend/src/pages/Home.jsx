@@ -152,7 +152,7 @@ const Benefits = () => {
   return (
     <section id="benefits" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">What you get with {BRAND.name}</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">What you get with {BRAND.name}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {BENEFITS.map((b) => (
             <Card key={b.title} className="bg-black/30 border-border/60">
