@@ -229,7 +229,7 @@ const CTA = () => {
               </div>
               <p className="text-xs text-muted-foreground mt-3">{BOOKING.fallbackText}</p>
               <a href={BOOKING.calendlyUrl} target="_blank" rel="noreferrer">
-                <Button className="mt-3 bg-violet-600 hover:bg-violet-700">Open Calendly</Button>
+                <Button className="mt-3 bg-violet-600 hover:bg-violet-700 text-white">Open Calendly</Button>
               </a>
             </CardContent>
           </Card>
