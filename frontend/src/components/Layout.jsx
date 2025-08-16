@@ -12,7 +12,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-md bg-gradient-to-br from-violet-500 to-violet-700" />
-          <span className="font-semibold tracking-tight">{BRAND.name}</span>
+          <span className="font-semibold tracking-tight text-white">{BRAND.name}</span>
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((n) => (
