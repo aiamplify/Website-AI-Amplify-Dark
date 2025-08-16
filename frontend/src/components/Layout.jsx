@@ -21,7 +21,7 @@ const Header = () => {
             </a>
           ))}
           <a href="#cta">
-            <Button className="bg-violet-600 hover:bg-violet-700">Book a call</Button>
+            <Button className="bg-violet-600 hover:bg-violet-700 text-white">Book a call</Button>
           </a>
         </nav>
         <div className="md:hidden">
