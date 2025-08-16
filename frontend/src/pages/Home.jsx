@@ -120,7 +120,7 @@ const CaseStudies = () => {
               <CardContent className="pt-6">
                 <Badge className="bg-violet-600/20 text-violet-300">{c.industry}</Badge>
                 <h3 className="mt-3 text-lg font-medium">{c.company}</h3>
-                <p className="text-sm text-white/80 mt-1">{c.blurb}</p>
+                <p className="text-sm text-white mt-1">{c.blurb}</p>
                 <p className="text-sm mt-2">{c.headline}</p>
                 <div className="mt-4">
                   {openId === c.id ? (
