@@ -38,31 +38,37 @@ export const SERVICES = [
     title: "Inbound Calls",
     desc: "Human-like virtual receptionist to handle your incoming calls.",
     icon: "PhoneIncoming",
+    imageUrl: "https://images.unsplash.com/photo-1617722694908-9be1092d1bc2",
   },
   {
     title: "Outbound Calls",
     desc: "Automate reminders, lead re-activation, follow-ups and more.",
     icon: "PhoneOutgoing",
+    imageUrl: "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a",
   },
   {
     title: "Lead Qualification",
     desc: "Capture and qualify leads in real-time, route to the right team.",
     icon: "BadgeCheck",
+    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
   },
   {
     title: "Appointment Booking",
     desc: "Book meetings on your calendar instantly during calls.",
     icon: "Calendar",
+    imageUrl: "https://images.unsplash.com/photo-1605957073056-34ea7e8dafea",
   },
   {
     title: "Ticketing + CRM",
     desc: "Create tickets, update CRMs, and sync notes to your stack.",
     icon: "Cable",
+    imageUrl: "https://images.unsplash.com/photo-1603684560609-57feb6c6e3df",
   },
   {
-    title: "Knowledge Q&amp;A",
+    title: "Knowledge Q&A",
     desc: "Answer FAQs with your policies, docs, and knowledge base.",
     icon: "BookOpen",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
   },
 ];
 
@@ -114,6 +120,7 @@ export const CASE_STUDIES = [
       "We launched an AI Voice Agent that called every new lead within seconds.",
     industry: "Travel",
     youtubeId: "dQw4w9WgXcQ",
+    imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
   },
   {
     id: "jili-properties",
@@ -123,6 +130,7 @@ export const CASE_STUDIES = [
       "200+ inbound calls/month were handled manually. Our agent now routes every call instantly.",
     industry: "Property Management",
     youtubeId: "ysz5S6PUM-U",
+    imageUrl: "https://images.unsplash.com/photo-1718220216044-006f43e3a9b1",
   },
   {
     id: "managed-it",
@@ -132,6 +140,7 @@ export const CASE_STUDIES = [
       "Off-hours calls resolved automatically – even at 2am.",
     industry: "Managed IT",
     youtubeId: "kXYiU_JCYtU",
+    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
   },
 ];
 
@@ -168,12 +177,14 @@ export const TESTIMONIALS = [
     title: "Founder, River Cities Systems",
     quote:
       "AI Amplify quickly understood our needs and built an AI Receptionist that fit right into our workflow. It saves us hours each week and makes everything more efficient.",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
   },
   {
     name: "Operations Lead",
     title: "Jili Properties",
     quote:
       "Our inbound volume is now handled instantly and routed properly. The impact was immediate.",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
   },
 ];
 
@@ -186,4 +197,5 @@ export const BOOKING = {
   calendlyUrl: "https://calendly.com/d/cwy5-jwz-fmg/ai-voice-agent-discovery-call",
   fallbackText:
     "Can't see the booking form? Click the button to open Calendly in a new tab.",
+  illustrationUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
 };
