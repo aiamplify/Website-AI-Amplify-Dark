@@ -185,7 +185,7 @@ const Process = () => {
                   <Icon name={p.icon} />
                 </div>
                 <h3 className="mt-2 font-medium">{p.title}</h3>
-                <p className="text-sm text-white/80 mt-1">{p.desc}</p>
+                <p className="text-sm text-white mt-1">{p.desc}</p>
               </CardContent>
             </Card>
           ))}
