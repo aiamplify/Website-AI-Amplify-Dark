@@ -268,12 +268,18 @@ const ContactForm = () => {
             </div>
             <div>
               <Label htmlFor="type">Inquiry Type</Label>
-              <select id="type" className="mt-2 w-full bg-transparent border rounded-md px-3 py-2 text-sm" value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}>
-                <option>Sales</option>
-                <option>Hiring</option>
-                <option>Sponsor</option>
-                <option>Other</option>
-              </select>
+              {/* Using shadcn select */}
+              <Select value={form.type} onValueChange={(v) => setForm({ ...form, type: v })}>
+                <SelectTrigger id="type" className="mt-2">
+                  <SelectValue placeholder="Select type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Sales">Sales</SelectItem>
+                  <SelectItem value="Hiring">Hiring</SelectItem>
+                  <SelectItem value="Sponsor">Sponsor</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             <div>
               <Label htmlFor="message">How can we help you?</Label>
