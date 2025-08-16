@@ -57,7 +57,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-md bg-gradient-to-br from-violet-500 to-violet-700" />
-            <span className="font-semibold tracking-tight">{BRAND.name}</span>
+            <span className="font-semibold tracking-tight text-white">{BRAND.name}</span>
           </div>
           <p className="text-sm text-white/80 mt-3 max-w-sm">
             {BRAND.subTagline}
