@@ -200,7 +200,7 @@ export const LEGAL = {
 };
 
 export const BOOKING = {
-  calendlyUrl: "https://calendly.com/d/cwy5-jwz-fmg/ai-voice-agent-discovery-call",
+  calendlyUrl: "https://calendly.com/aiamplify22",
   fallbackText:
     "Can't see the booking form? Click the button to open Calendly in a new tab.",
   illustrationUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",

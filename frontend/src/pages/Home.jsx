@@ -241,6 +241,41 @@ const Testimonials = () => {
 };
 
 const CTA = () => {
+  const calendlyRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
+    const alreadyLoaded = document.querySelector(`script[src="${scriptSrc}"]`);
+
+    function initCalendly() {
+      if (window.Calendly && calendlyRef.current) {
+        window.Calendly.initInlineWidget({
+          url: BOOKING.calendlyUrl,
+          parentElement: calendlyRef.current,
+          prefill: {},
+          utm: {},
+        });
+      }
+    }
+
+    if (!alreadyLoaded) {
+      const s = document.createElement("script");
+      s.src = scriptSrc;
+      s.async = true;
+      s.onload = initCalendly;
+      document.head.appendChild(s);
+    } else {
+      initCalendly();
+    }
+
+    return () => {
+      // Cleanup: Calendly doesn't provide destroy API; empty container on unmount
+      if (calendlyRef.current) {
+        calendlyRef.current.innerHTML = "";
+      }
+    };
+  }, []);
+
   return (
     <section id="cta" className="py-16">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
@@ -249,12 +284,8 @@ const CTA = () => {
           <p className="text-muted-foreground mt-3 max-w-prose">We’ll cover your business needs and an AI Voice Agent strategy tailored to you.</p>
           <Card className="mt-6 bg-black/30 border-border/60">
             <CardContent className="pt-6">
-              <div className="aspect-video rounded-lg overflow-hidden bg-muted/10 flex items-center justify-center">
-                {BOOKING.illustrationUrl ? (
-                  <img src={BOOKING.illustrationUrl} alt="AI Amplify illustration" className="w-full h-full object-cover" />
-                ) : (
-                  <p className="text-xs text-muted-foreground">Calendly embed placeholder</p>
-                )}
+              <div className="rounded-lg overflow-hidden" style={{ minWidth: 320, height: 700 }}>
+                <div ref={calendlyRef} className="calendly-inline-widget" style={{ minWidth: 320, height: 700 }} />
               </div>
               <p className="text-xs text-muted-foreground mt-3">{BOOKING.fallbackText}</p>
               <a href={BOOKING.calendlyUrl} target="_blank" rel="noreferrer">
