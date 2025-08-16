@@ -113,7 +113,7 @@ const CaseStudies = () => {
   return (
     <section id="case-studies" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Our success stories</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Our success stories</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {CASE_STUDIES.map((c) => (
             <Card key={c.id} className="bg-black/30 border-border/60">
