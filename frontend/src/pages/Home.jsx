@@ -96,7 +96,7 @@ const Solutions = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{s.desc}</p>
+                    <p className="text-sm text-white/80 mt-1">{s.desc}</p>
                   </div>
                 </div>
               </CardContent>
