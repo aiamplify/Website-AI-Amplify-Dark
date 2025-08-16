@@ -88,7 +88,7 @@ const Footer = () => {
         <p className="text-muted-foreground">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
         <div className="flex items-center gap-4">
           <Link to={LEGAL.privacyUrl} className="text-white/70 hover:text-white">Privacy Policy</Link>
-          <Link to={LEGAL.termsUrl} className="text-muted-foreground hover:text-foreground">Terms of Service</Link>
+          <Link to={LEGAL.termsUrl} className="text-white/70 hover:text-white">Terms of Service</Link>
         </div>
       </div>
     </footer>
