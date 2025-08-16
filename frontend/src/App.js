@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { Privacy, Terms } from "./pages/Legal";
-import { Toaster } from "./components/ui/sonner";
+import { Toaster } from "./components/ui/toaster";
 import "./index.css";
 
 function App() {
