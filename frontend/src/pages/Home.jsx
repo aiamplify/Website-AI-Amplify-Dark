@@ -84,7 +84,7 @@ const Solutions = () => {
   return (
     <section id="solutions" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Receive &amp; Send Automated Phone Calls</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Receive &amp; Send Automated Phone Calls</h2>
         <p className="text-white/80 mt-3 max-w-2xl">Capture leads, qualify, book appointments, raise tickets, answer questions, send info, reminders – you name it.</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
           {SERVICES.map((s) => (
