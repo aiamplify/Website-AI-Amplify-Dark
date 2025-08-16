@@ -52,8 +52,8 @@ const Hero = () => {
             {BRAND.subTagline}
           </p>
           <div className="mt-6 flex items-center gap-3">
-            <a href="#cta"><Button className="bg-violet-600 hover:bg-violet-700">Book your free discovery call</Button></a>
-            <a href="#solutions" className="text-sm text-muted-foreground hover:text-foreground">Explore solutions</a>
+            <a href="#cta"><Button className="bg-violet-600 hover:bg-violet-700 text-white">Book your free discovery call</Button></a>
+            <a href="#solutions" className="text-sm text-white hover:text-white">Explore solutions</a>
           </div>
         </div>
         <div className="md:col-span-5">
