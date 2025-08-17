@@ -118,7 +118,7 @@ const CaseStudies = () => {
   const [openId, setOpenId] = useState(null);
   return (
     <section id="case-studies" className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx_auto px-4">
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Our success stories</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {CASE_STUDIES.map((c) => (
@@ -242,34 +242,58 @@ const Testimonials = () => {
 
 const CTA = () => {
   const calendlyRef = React.useRef(null);
+  const initializedRef = React.useRef(false);
 
   React.useEffect(() => {
     const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
-    const alreadyLoaded = document.querySelector(`script[src="${scriptSrc}"]`);
+    const cssHref = "https://assets.calendly.com/assets/external/widget.css";
 
-    function initCalendly() {
-      if (window.Calendly && calendlyRef.current) {
-        window.Calendly.initInlineWidget({
-          url: BOOKING.calendlyUrl,
-          parentElement: calendlyRef.current,
-          prefill: {},
-          utm: {},
-        });
+    function injectCssOnce() {
+      if (!document.querySelector(`link[href="${cssHref}"]`)) {
+        const l = document.createElement("link");
+        l.rel = "stylesheet";
+        l.href = cssHref;
+        document.head.appendChild(l);
       }
     }
 
-    if (!alreadyLoaded) {
+    function initCalendly() {
+      if (initializedRef.current) return;
+      if (window.Calendly && calendlyRef.current) {
+        try {
+          window.Calendly.initInlineWidget({
+            url: BOOKING.calendlyUrl,
+            parentElement: calendlyRef.current,
+            prefill: {},
+            utm: {},
+          });
+          initializedRef.current = true;
+        } catch (err) {
+          console.error("Calendly init failed", err);
+        }
+      }
+    }
+
+    injectCssOnce();
+
+    const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
+    if (!existingScript) {
       const s = document.createElement("script");
       s.src = scriptSrc;
       s.async = true;
       s.onload = initCalendly;
+      s.onerror = (e) => console.error("Calendly script load error", e);
       document.head.appendChild(s);
     } else {
-      initCalendly();
+      if (window.Calendly) {
+        initCalendly();
+      } else {
+        existingScript.addEventListener("load", initCalendly);
+      }
     }
 
     return () => {
-      // Cleanup: Calendly doesn't provide destroy API; empty container on unmount
+      initializedRef.current = false;
       if (calendlyRef.current) {
         calendlyRef.current.innerHTML = "";
       }
@@ -285,7 +309,7 @@ const CTA = () => {
           <Card className="mt-6 bg-black/30 border-border/60">
             <CardContent className="pt-6">
               <div className="rounded-lg overflow-hidden" style={{ minWidth: 320, height: 700 }}>
-                <div ref={calendlyRef} className="calendly-inline-widget" style={{ minWidth: 320, height: 700 }} />
+                <div ref={calendlyRef} style={{ minWidth: 320, height: 700 }} />
               </div>
               <p className="text-xs text-muted-foreground mt-3">{BOOKING.fallbackText}</p>
               <a href={BOOKING.calendlyUrl} target="_blank" rel="noreferrer">
