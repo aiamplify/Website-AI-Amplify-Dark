@@ -118,7 +118,7 @@ const CaseStudies = () => {
   const [openId, setOpenId] = useState(null);
   return (
     <section id="case-studies" className="py-16">
-      <div className="max-w-6xl mx_auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Our success stories</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {CASE_STUDIES.map((c) => (
@@ -241,64 +241,10 @@ const Testimonials = () => {
 };
 
 const CTA = () => {
-  const calendlyRef = React.useRef(null);
-  const initializedRef = React.useRef(false);
-
-  React.useEffect(() => {
-    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
-    const cssHref = "https://assets.calendly.com/assets/external/widget.css";
-
-    function injectCssOnce() {
-      if (!document.querySelector(`link[href="${cssHref}"]`)) {
-        const l = document.createElement("link");
-        l.rel = "stylesheet";
-        l.href = cssHref;
-        document.head.appendChild(l);
-      }
-    }
-
-    function initCalendly() {
-      if (initializedRef.current) return;
-      if (window.Calendly && calendlyRef.current) {
-        try {
-          window.Calendly.initInlineWidget({
-            url: BOOKING.calendlyUrl,
-            parentElement: calendlyRef.current,
-            prefill: {},
-            utm: {},
-          });
-          initializedRef.current = true;
-        } catch (err) {
-          console.error("Calendly init failed", err);
-        }
-      }
-    }
-
-    injectCssOnce();
-
-    const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
-    if (!existingScript) {
-      const s = document.createElement("script");
-      s.src = scriptSrc;
-      s.async = true;
-      s.onload = initCalendly;
-      s.onerror = (e) => console.error("Calendly script load error", e);
-      document.head.appendChild(s);
-    } else {
-      if (window.Calendly) {
-        initCalendly();
-      } else {
-        existingScript.addEventListener("load", initCalendly);
-      }
-    }
-
-    return () => {
-      initializedRef.current = false;
-      if (calendlyRef.current) {
-        calendlyRef.current.innerHTML = "";
-      }
-    };
-  }, []);
+  const embedDomain = typeof window !== "undefined" ? window.location.hostname : "localhost";
+  const calendlyUrl = useMemo(() => (
+    `${BOOKING.calendlyUrl}?embed_domain=${embedDomain}&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1&primary_color=8B5CF6&text_color=ffffff&background_color=0d0b12`
+  ), [embedDomain]);
 
   return (
     <section id="cta" className="py-16">
@@ -309,7 +255,15 @@ const CTA = () => {
           <Card className="mt-6 bg-black/30 border-border/60">
             <CardContent className="pt-6">
               <div className="rounded-lg overflow-hidden" style={{ minWidth: 320, height: 700 }}>
-                <div ref={calendlyRef} style={{ minWidth: 320, height: 700 }} />
+                <iframe
+                  title="Schedule time with AI Amplify"
+                  src={calendlyUrl}
+                  width="100%"
+                  height="700"
+                  frameBorder="0"
+                  loading="lazy"
+                  style={{ minWidth: 320, height: 700 }}
+                />
               </div>
               <p className="text-xs text-muted-foreground mt-3">{BOOKING.fallbackText}</p>
               <a href={BOOKING.calendlyUrl} target="_blank" rel="noreferrer">
